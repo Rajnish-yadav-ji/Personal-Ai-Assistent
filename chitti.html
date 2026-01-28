@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chitti AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white min-h-screen flex flex-col justify-between">
+
+
+<header class="w-full flex justify-between items-center p-4 border-b border-zinc-800">
+  <h1 class="text-2xl font-bold text-cyan-400">Chitti AI</h1>
+
+  <button onclick="changeBot()"
+    class="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-cyan-600 transition">
+    Change Bot
+  </button>
+</header>
+
+<main class="flex flex-col items-center justify-center flex-1 gap-6 text-center">
+
+  <img src="assets/chatbot.webp"
+    class="w-64 animate-float drop-shadow-[0_0_30px_#00ffff]">
+
+  <h2 class="text-3xl font-bold">
+    Hello <span id="username" class="text-cyan-400"></span> 👋
+  </h2>
+
+  <p class="text-lg text-zinc-400 max-w-md">
+    I am <span class="text-2xl text-blue-400 font-bold">Chitti,</span> your English AI Assistant.
+  </p>
+
+  <img id="voiceGif" src="assets/podcast.gif" class="w-32 hidden rounded-full">
+
+</main>
+
+<button id="micBtn"
+  class="mb-8 mx-auto flex items-center gap-3 px-8 py-4 text-lg rounded-full
+  bg-gradient-to-r from-cyan-400 to-blue-500
+  hover:scale-110 transition shadow-xl">
+
+  <img src="assets/mic.png" class="w-8">
+  Talk to Chitti
+</button>
+
+<script src="JavaScript/chitti.js"></script>
+
+<style>
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+</style>
+
+</body>
+</html>

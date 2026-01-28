@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Selection</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white min-h-screen flex items-center justify-center">
+<div id="nameModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+  <div class="bg-zinc-900 p-8 rounded-2xl shadow-2xl w-[90%] max-w-md animate-[pop_0.4s_ease]">
+    <h2 class="text-3xl font-extrabold text-center mb-6 text-cyan-400">
+      What is your name?
+    </h2>
+
+    <input id="usernameInput"
+      type="text"
+      placeholder="Enter your name"
+      class="w-full p-3 rounded bg-black border border-cyan-500 focus:outline-none mb-5 text-white">
+
+    <button id="continueBtn"
+      class="w-full py-3 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-lg font-bold tracking-wide
+      hover:scale-105 transition-all duration-300">
+      Continue
+    </button>
+  </div>
+</div>
+
+<section id="botSection" class="hidden w-full px-6">
+  <h1 class="text-center text-4xl md:text-5xl font-extrabold mb-12">
+    Choose Your <span class="text-pink-500">AI Assistant</span>
+  </h1>
+
+  <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+    <div
+      class="bot-card group cursor-pointer bg-zinc-900 rounded-2xl p-6 text-center
+      hover:scale-105 transition-all duration-300 border border-transparent hover:border-pink-500"
+      data-bot="rajni">
+
+      <img src="assets/Rajni.png"
+        class="w-52 mx-auto mb-6 drop-shadow-xl group-hover:scale-110 transition">
+
+      <h3 class="text-3xl font-bold mb-2 text-pink-400">Rajni</h3>
+      <p class="text-lg">Language: Hindi (India)</p>
+      <p class="text-lg">Voice: Female</p>
+    </div>
+
+    <div
+      class="bot-card group cursor-pointer bg-zinc-900 rounded-2xl p-6 text-center
+      hover:scale-105 transition-all duration-300 border border-transparent hover:border-cyan-500"
+      data-bot="chitti">
+
+      <img src="assets/chatbot.webp"
+        class="w-52 mx-auto mb-6 drop-shadow-xl group-hover:scale-110 transition">
+
+      <h3 class="text-3xl font-bold mb-2 text-cyan-400">Chitti</h3>
+      <p class="text-lg">Language: English (US)</p>
+      <p class="text-lg">Voice: Male</p>
+    </div>
+
+  </div>
+</section>
+
+<script src="JavaScript/main.js"></script>
+<script src="JavaScript/chitti.js"></script>
+<script src="JavaScript/rajni.js"></script>
+
+</body>
+</html>
